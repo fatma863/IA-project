@@ -1,0 +1,54 @@
+:host {
+  display: block;
+}
+
+.dashboard-shell {
+  padding: 1.5rem 2rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.topbar,
+.panel-header,
+.metric-list div,
+.workout-item,
+.strava-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.summary-grid,
+.content-grid,
+.lower-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.summary-grid { grid-template-columns: 1.4fr 0.8fr 0.8fr; }
+.content-grid,
+.lower-grid { grid-template-columns: 1.2fr 0.8fr; }
+
+.card,
+.panel {
+  background: rgba(15, 23, 42, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 1.1rem;
+  padding: 1.2rem;
+}
+
+.highlight { background: linear-gradient(180deg, rgba(16, 185, 129, 0.16), rgba(15, 23, 42, 0.78)); }
+.kicker, .eyebrow { color: #34d399; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; }
+.action-message { color: #fde68a; }
+.primary-btn, .secondary-btn { border-radius: 999px; padding: 0.7rem 1rem; cursor: pointer; }
+.primary-btn { background: #34d399; border: 0; font-weight: 700; }
+.secondary-btn { background: transparent; color: #edf6ff; border: 1px solid rgba(148, 163, 184, 0.3); }
+.recovery-slot { margin-top: 1.25rem; }
+
+@media (max-width: 900px) {
+  .summary-grid,
+  .content-grid,
+  .lower-grid { grid-template-columns: 1fr; }
+}
